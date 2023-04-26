@@ -1,20 +1,6 @@
 repos:
-  - repo: local
-    hooks:
-      - id: terraform-validate
-        name: terraform validate
-        entry: terraform
-        args:
-          - validate
-        language: system
-        stages:
-          - commit
-      - id: terraform-fmt
-        name: terraform fmt
-        entry: terraform
-        args:
-          - fmt
-          - -check=true
-        language: system
-        stages:
-          - commit
+- repo: https://github.com/antonbabenko/pre-commit-terraform
+  rev: v1.77.3 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
+  hooks:
+    - id: terraform_fmt
+    - id: terraform_validate
