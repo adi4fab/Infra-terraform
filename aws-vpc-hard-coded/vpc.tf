@@ -16,8 +16,8 @@ module "vpc" {
   create_database_subnet_group       = true
   create_database_subnet_route_table = true
   database_subnet_tags = {
-    Terraform   = "true"
-    Name = "db-subnet-dev"
+    Terraform = "true"
+    Name      = "db-subnet-dev"
   }
 
   # nat for private subnet 
@@ -29,13 +29,13 @@ module "vpc" {
   enable_dns_support   = true
 
   public_subnet_tags = {
-    Terraform   = "true"
-    Name = "public-subnet-dev"
+    Terraform = "true"
+    Name      = "public-subnet-dev"
   }
 
   private_subnet_tags = {
-    Terraform   = "true"
-    Name = "private-subnet-dev"
+    Terraform = "true"
+    Name      = "private-subnet-dev"
   }
 
   tags = {
