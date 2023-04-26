@@ -18,3 +18,9 @@ variable "azs" {
   description = "availability zones"
   type        = list(string)
 }
+
+variable "aws_profile" {
+  description = "availability zones"
+  type        = string
+  default     = "default"
+}
