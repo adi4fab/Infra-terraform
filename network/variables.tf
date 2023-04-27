@@ -20,7 +20,7 @@ variable "azs" {
 }
 
 variable "aws_profile" {
-  description = "availability zones"
+  description = "availability zone"
   type        = string
   default     = "default"
 }
