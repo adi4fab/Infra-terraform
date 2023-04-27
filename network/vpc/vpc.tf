@@ -3,16 +3,16 @@ module "vpc" {
   version = "4.0.1"
 
 
-  name = "vpc-dev"
-  cidr = "10.0.0.0/16"
+  name = var.vpc_name
+  cidr = var.cidr_block
 
   azs             = var.azs
-  private_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
-  public_subnets  = ["10.0.101.0/24", "10.0.102.0/24"]
+  private_subnets = var.private_sub
+  public_subnets  = var.public_sub
 
 
   # database subnet config
-  database_subnets                   = ["10.0.151.0/24", "10.0.152.0/24"]
+  database_subnets                   = var.db_sub
   create_database_subnet_group       = true
   create_database_subnet_route_table = true
   database_subnet_tags = {

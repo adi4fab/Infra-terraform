@@ -24,3 +24,25 @@ variable "aws_profile" {
   type        = string
   default     = "default"
 }
+
+variable "vpc_name" {
+  description = "name of the vpc"
+  type        = string
+}
+
+variable "cidr_block" {
+  description = "cidr range"
+  type        = string
+}
+
+variable "private_sub" {
+  type = list(string)
+}
+
+variable "public_sub" {
+  type = list(string)
+}
+
+variable "db_sub" {
+  type = list(string)
+}
