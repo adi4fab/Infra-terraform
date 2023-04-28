@@ -3,7 +3,7 @@ module "vpc" {
   version = "4.0.1"
 
 
-  name = var.vpc_name
+  name = "production-vpc"
   cidr = var.cidr_block
 
   azs             = var.azs
