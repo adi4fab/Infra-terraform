@@ -8,7 +8,7 @@ terraform {
   }
   backend "s3" {
     bucket = "terraform-aditya-state-storage"
-    key    = "prod/network/vpc/terraform.tfstate"
+    key    = "prod/network/security-group/terraform.tfstate"
     region = "us-east-1"
   }
 }
