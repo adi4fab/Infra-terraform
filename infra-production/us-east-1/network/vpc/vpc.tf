@@ -17,7 +17,7 @@ module "vpc" {
   create_database_subnet_route_table = true
   database_subnet_tags = {
     Terraform = "true"
-    Name      = "db-subnet-${var.env}"
+    Name      = "production-db-subnet"
   }
 
   # nat for private subnet and single nat since it costs - for prod comment it
@@ -30,12 +30,12 @@ module "vpc" {
 
   public_subnet_tags = {
     Terraform = "true"
-    Name      = "public-subnet-${var.env}"
+    Name      = "production-public-subnet"
   }
 
   private_subnet_tags = {
     Terraform = "true"
-    Name      = "private-subnet-${var.env}"
+    Name      = "production-private-subnet"
   }
 
   tags = local.common_tags
