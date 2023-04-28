@@ -4,7 +4,7 @@ module "public-bastion-sg" {
 
   name                = "production-public-bastion-sg"
   description         = "Security group for web-server with HTTP and SSH ports open within VPC"
-  vpc_id              = "adawdaw"
+  vpc_id              = data.terraform_remote_state.vpc.outputs.vpc_id
   ingress_cidr_blocks = ["0.0.0.0/0"]
   ingress_rules       = ["ssh-tcp"]
   egress_rules        = ["all-all"]

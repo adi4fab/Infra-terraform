@@ -4,7 +4,7 @@ module "security-group" {
 
   name                = "production-web-server-sg"
   description         = "Security group for web-server with HTTP and SSH ports open within VPC"
-  vpc_id              = "adawdaw"
+  vpc_id              = data.terraform_remote_state.vpc.outputs.vpc_id
   ingress_cidr_blocks = ["10.10.0.0/16"]
   ingress_rules       = ["http-80-tcp", "ssh-tcp"]
 
