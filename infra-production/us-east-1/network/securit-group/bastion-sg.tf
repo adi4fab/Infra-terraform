@@ -1,10 +1,10 @@
-module "public-bastion-sg" {
+module "prod-public-bastion-sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "4.17.2"
 
-  name                = "production-public-bastion-sg"
-  description         = "Security group for web-server with HTTP and SSH ports open within VPC"
-  vpc_id              = data.terraform_remote_state.vpc.outputs.vpc_id
+  name                = "prod-public-bastion-sg"
+  description         = "Security group for public bation host"
+  vpc_id              = data.terraform_remote_state.vpc.outputs.vpc_id_prod
   ingress_cidr_blocks = ["0.0.0.0/0"]
   ingress_rules       = ["ssh-tcp"]
   egress_rules        = ["all-all"]
