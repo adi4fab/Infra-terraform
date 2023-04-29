@@ -8,10 +8,7 @@ variable "instance_key" {
   type        = string
 }
 
-variable "private_instance_count" {
-  description = "number of instance"
-  type        = number
-}
+
 
 
 
