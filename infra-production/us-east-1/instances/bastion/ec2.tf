@@ -7,6 +7,7 @@ module "bation" {
   version = "5.0.0"
 
   name = "bation-prod"
+  ami  = module.ami.amazon_linux_image_id
 
   instance_type          = var.instance_type
   key_name               = var.instance_key
