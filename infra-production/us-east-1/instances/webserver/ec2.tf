@@ -8,8 +8,8 @@ module "webserver" {
 
   name = "webserver-prod"
 
-  count = var.private_instance_count
-
+  count                  = var.private_instance_count
+  ami                    = module.ami.amazon_linux_image_id
   instance_type          = var.instance_type
   key_name               = var.instance_key
   vpc_security_group_ids = ["${data.terraform_remote_state.sg.outputs.private_webserver_sg_id_prod}"]
