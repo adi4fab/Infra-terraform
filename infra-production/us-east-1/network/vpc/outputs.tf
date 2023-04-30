@@ -18,7 +18,6 @@ output "nat_gateway_id_prod" {
   value = module.vpc.nat_public_ips
 }
 
-
 output "azs_prod" {
   value = module.vpc.azs
 }

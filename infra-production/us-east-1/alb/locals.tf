@@ -4,4 +4,3 @@ locals {
     environment = "production"
   }
 }
-
