@@ -1,2 +1,2 @@
 instance_type = "t3.micro"
-instance_key = "first"
+instance_key  = "first"

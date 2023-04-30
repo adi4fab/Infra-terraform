@@ -4,8 +4,8 @@ module "elb_http" {
 
   name = "prod-elb"
 
-  subnets         = ["${data.terraform_remote_state.vpc.outputs.public_subnet_id_prod[0]}",
-                    "${data.terraform_remote_state.vpc.outputs.public_subnet_id_prod[1]}" ]
+  subnets = ["${data.terraform_remote_state.vpc.outputs.public_subnet_id_prod[0]}",
+  "${data.terraform_remote_state.vpc.outputs.public_subnet_id_prod[1]}"]
   security_groups = ["${module.prod-alb-sg.security_group_id}"]
   internal        = false
 
