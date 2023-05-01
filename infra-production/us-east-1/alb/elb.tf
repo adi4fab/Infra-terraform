@@ -6,9 +6,9 @@ module "alb" {
 
   load_balancer_type = "application"
 
-  vpc_id             = data.terraform_remote_state.vpc.outputs.vpc_id_prod
-  subnets            = data.terraform_remote_state.vpc.outputs.public_subnet_id_prod
-  security_groups    = [module.prod-alb-sg.security_group_id]
+  vpc_id          = data.terraform_remote_state.vpc.outputs.vpc_id_prod
+  subnets         = data.terraform_remote_state.vpc.outputs.public_subnet_id_prod
+  security_groups = [module.prod-alb-sg.security_group_id]
 
 
 
