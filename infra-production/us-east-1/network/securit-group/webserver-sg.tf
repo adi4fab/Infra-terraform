@@ -7,6 +7,7 @@ module "prod-private-webserver-sg" {
   vpc_id              = data.terraform_remote_state.vpc.outputs.vpc_id_prod
   ingress_cidr_blocks = ["${data.terraform_remote_state.vpc.outputs.vpc_cidr_prod}"]
   ingress_rules       = ["http-80-tcp", "ssh-tcp"]
+  egress_rules        = ["all-all"]
 
   tags = local.common_tags
 }
